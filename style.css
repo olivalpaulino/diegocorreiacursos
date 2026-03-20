@@ -586,6 +586,36 @@ body{
   font-size: .9rem;
 }
 
+.welcome-text{
+  margin-top: .15rem;
+}
+.welcome-text__question{
+  margin:0 0 .85rem;
+  font-weight:900;
+  color: rgba(234,240,255,0.92);
+}
+.welcome-text__link{
+  color: var(--primary);
+  text-decoration:none;
+  border-bottom: 1px solid rgba(212,175,55,0.45);
+}
+.welcome-text__link:hover{
+  color: rgba(234,240,255,0.98);
+  border-bottom-color: rgba(234,240,255,0.45);
+}
+.welcome-text__body{
+  margin:0;
+  color: rgba(234,240,255,0.82);
+  font-weight:750;
+  line-height:1.45;
+}
+.welcome-actions{
+  display:flex;
+  gap:.85rem;
+  flex-wrap:wrap;
+  margin-top: 1.15rem;
+}
+
 .form{
   background: rgba(234,240,255,0.04);
   border: 1px solid rgba(234,240,255,0.10);

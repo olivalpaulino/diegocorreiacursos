@@ -82,7 +82,9 @@
 
           <div class="hero__actions">
             <a class="btn btn--primary" href="#preco">Garantir vaga</a>
-            <a class="btn btn--ghost" href="#faq">Tirar dúvidas</a>
+            <a class="btn btn--ghost" href="https://wa.me/5582981184294?text=Olival%2C%20quero%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20curso%20PMAL.">
+              Falar com Olival (WhatsApp)
+            </a>
           </div>
 
           <div class="hero__micro">
@@ -113,6 +115,36 @@
               <path d="M144 148v56" stroke="rgba(234,240,255,0.35)" stroke-width="4" stroke-linecap="round"/>
             </svg>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="bem-vindo" aria-label="Bem vindo ao Diego Correia Cursos">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">Bem vindo ao<br />Diego Correia Cursos</h2>
+          <p class="section__lead">
+            Curso preparatório para concursos públicos especialista nas áreas de carreiras policiais, carreiras administrativas, carreiras saúde, carreiras tribunais, carreiras fiscais e disciplinas isoladas. Nosso objetivo é possibilitar o acesso a um curso preparatório de qualidade e humanizado com muitos diferenciais e valores acessíveis.
+          </p>
+        </header>
+
+        <div class="welcome-text">
+          <p class="welcome-text__question">
+            Tem perguntas? <a class="welcome-text__link" href="#faq">Mande sua duvida</a>
+          </p>
+          <p class="welcome-text__body">
+            Não há quem não se surpreenda: aulas ministradas por excelentes professores experientes em concursos, materiais didáticos de ótima qualidade, professores disponíveis para tirar dúvidas, aulões e muitos outros recursos que farão a diferença para a sua aprovação, além do nosso acolhimento genuíno e característico que você só encontra aqui.
+          </p>
+        </div>
+
+        <div class="welcome-actions" aria-label="Acesso ao curso">
+          <a class="btn btn--primary" href="https://pay.kiwify.com.br/vZSFHZc?afid=8aDCmyip">
+            Ir para o checkout
+          </a>
+          <a class="btn btn--ghost" href="#preco">Quero meu plano</a>
+          <a class="btn btn--ghost" href="https://wa.me/5582981184294?text=Olival%2C%20quero%20falar%20sobre%20o%20curso%20PMAL.">
+            WhatsApp com Olival
+          </a>
         </div>
       </div>
     </section>
@@ -342,6 +374,10 @@
               Quero receber as informações
             </button>
 
+            <a class="btn btn--ghost btn--full" href="https://wa.me/5582981184294?text=Olival%2C%20quero%20garantir%20meu%20acesso%20ao%20curso%20PMAL.">
+              Falar no WhatsApp com Olival
+            </a>
+
             <div class="form__fineprint">
               Ao enviar, você concorda em ser contatado(a). Você pode sair da lista quando quiser.
             </div>
@@ -449,6 +485,8 @@
       // Form lead (front-end apenas; customize para WhatsApp/CRM depois)
       const form = document.getElementById("lead-form");
       if (form) {
+        const checkoutUrl = "https://pay.kiwify.com.br/vZSFHZc?afid=8aDCmyip";
+
         form.addEventListener("submit", (ev) => {
           ev.preventDefault();
           const data = new FormData(form);
@@ -457,9 +495,8 @@
 
           if (!nome || !whatsapp) return;
 
-          // Placeholder: aqui você pluga integração (WhatsApp, webhook, etc.)
-          alert("Obrigado, " + nome + "! Recebemos seus dados. Em breve você receberá as informações no WhatsApp.");
-          form.reset();
+          // Sem backend aqui: redireciona para o checkout
+          window.location.href = checkoutUrl;
         });
       }
     })();
